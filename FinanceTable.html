@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Test of FTable.js</title>
+        <script src="./FinanceTable.js"></script>
+        <script>
+            var ft = new FinanceTable();
+            var row = ft.getRow(new Date(2015, 10, 11));
+            row.e = 11;
+            row = ft.getRow(new Date(2015, 10, 13));
+            row.e = 13;
+            row = ft.getRow(new Date(2015, 10, 23));
+            row.t = 23;
+        </script>
+    </head>
+    <body>
+        <h1>Test of FTable.js</h1>
+        body
+    </body>
+</html>
