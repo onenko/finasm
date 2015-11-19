@@ -1,0 +1,193 @@
+/*
+** css-page.css
+*/
+
+body
+{
+  background-color:#330022;
+/*  color:#CCCCCC;
+  font-family: Tahoma;
+  font-size:11px;
+  font-weight:500;	 400 - normal, 700 - bold
+   */
+}
+
+a:link { color:#DDDDCC; text-decoration:underlined; /* font-weight:600; */ }
+a:visited { color:#CCCCCC;/*  font-weight:550; */ text-decoration:underlined; }
+a:hover { color:#EEEECC;/*  font-weight:550; */ text-decoration:underlined; }
+a:active { color:#FFFFCC; font-weight:550; text-decoration:underlined; }
+
+h1 { color:#EEEEEE; font:18px Tahoma bold; text-align:center;}
+h2 { color:#EEEEEE; font:16px Tahoma bold; }
+h3 { color:#DDDDDD; font:16px Tahoma bold; }
+h4 { color:#DDDDDD; font:14px Tahoma bold; }
+h5 { color:#CCCCCC; font:14px Tahoma bold; }
+h6 { color:#CCCCCC; font:12px Tahoma bold; }
+
+hr {
+  border: 0;
+  color:#770077;
+  background-color:#770077;
+  height:1px;
+}
+
+table
+{
+/* width: 100%; -- this is good only for layout tables */
+  border-collapse:collapse;
+  border: 1px solid #993377;
+  background-color:#330022;
+  color:#CCCCCC;
+  font-family: verdana,helvetica,arial,sans-serif;	/*Tahoma;*/
+  font-size:13px;
+  font-weight:500;	/* 400 - normal, 700 - bold */
+}
+
+td {
+  border: 1px solid #993377;
+  background-color:#330022;
+  padding: 4px;
+}
+
+th, td.thead {
+  border: 1px solid #993377;
+  background-color:#550033;
+  font-weight:400;	/* 400 - normal, 700 - bold */
+  text-align:center;
+}
+
+/** LAYOUT TABLES AND CELLS **/
+table.layout-table
+{
+  width: 100%;
+  border-style: none;
+}
+
+td.left-panel
+{
+  width:144px;
+  border: 0px;
+}
+
+td.right-panel-with-main-area
+{
+  border: 0px;
+  height: 100%;
+  vertical-align: top;
+}
+
+td.vertical-gap
+{
+  width:9px;
+  border: 0px;
+}
+
+td.vertical-divider
+{
+  border-left: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-right: 1px dotted #880088;
+}
+
+td.main-area-header, td.main-area-footer, td.main-area-content, td.news-column
+{
+  border: 0;
+}
+
+td.money {
+  text-align:right;
+  color:#BBBBBB;
+}
+
+td.zero {
+  text-align:right;
+  color:#777777;
+}
+
+td.tmoney {
+  text-align:right;
+  color:#DDDDDD;
+  background-color:#550033;
+}
+
+td.usd {
+  text-align:right;
+  color:#99DD99;
+}
+
+td.eur {
+  text-align:right;
+  color:#DD9999;
+}
+
+td.gbp {
+  text-align:right;
+  color:#9999DD;
+}
+
+td.disbalance {
+  text-align:right;
+  color:#FF0000;
+  font-weight:700;  /* 400 - normal, 700 - bold */
+}
+
+
+
+
+table.news
+{
+  width: 90%;
+  border-style: none;
+}
+
+td.news
+{
+  border: 1px solid #662244;
+  background-color:#441133;
+}
+
+textarea {
+  border: 1px solid #662244;
+  background-color:#441133;
+  color:#CCCCCC;
+  font-family: verdana,helvetica,arial,sans-serif;  /*Tahoma;*/
+  font-size:13px;
+  font-weight:500;  /* 400 - normal, 700 - bold */
+}
+
+#fileinput {
+  color:#999999;
+}
+
+/* teq cells - cells for Top EQuip - playing with borders */
+td.teq-lr {
+  border-top: 0px;
+  border-bottom: 0px;
+}
+td.teq-lrt {
+  border-bottom: 0px;
+}
+
+td.teq-val {
+  text-align:center;
+}
+
+td.teq-bad {
+  text-align:center;
+  color:#DD0000;
+}
+
+td.teq-good {
+  text-align:center;
+  color:#00FF00;
+}
+
+td.teq-best {
+  text-align:center;
+  color:#FFFF00;
+}
+
+td.teq-prm {
+  text-align:left;
+}
