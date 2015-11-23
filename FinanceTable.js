@@ -23,7 +23,7 @@ function FinanceTable() {
         { field: 'div', title: 'Divers', cmd: 'x'},
         { field: 'food', title: 'Food', cmd: 'p'},
         { field: 'havk', title: 'Havka', cmd: 'e'},
-        { field: 'ent', title: 'Rozv', cmd: ''?'},
+        { field: 'ent', title: 'Rozv', cmd: '?'},
         { field: 'educ', title: 'Educ', cmd: 'e'},
         { field: 'car', title: 'Car', cmd: 'e'},
         { field: 'trans', title: 'Trnsp', cmd: 'e'},
@@ -33,13 +33,15 @@ function FinanceTable() {
         { field: 'mama1', title: 'Mama1', cmd: 'e'},
         { field: 'mama2', title: 'Mama2', cmd: 'e'}
     ];
-    
+
+    /*
     { date:'Date', div:'Divers', food:'Food', havk:'Havka', ent:'Rozv', edu: "Obraz", car: 'Car', trans: "Trnsp",
       health: "Health", komun: "Komun", biggy: "Doroge", mama1:'Mama1', mama2:'Mama2',
           home:'Home', 
       mine:'Mine', wife:'Wife', visa:'Visa', usd:'USD', eur: 'EUR', gbp: 'GBP', debt: 'Debt', total: '0', zp: 'Zarplata',
       xusd: 'xUSD', xeur: 'xEUR', xgbp: 'xGBP', usdTotal: '=USD' },
-          
+      */
+    
     this.configPay = [
         { field: 'mine', title: "Mine", cmd: "1"},
         { field: 'wife', title: "Wife", cmd: "2"},
