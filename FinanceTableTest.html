@@ -11,33 +11,33 @@
         <h1>Test of FTable.js</h1>
         <table id="report" width="100%" border="1">
           <tr ng-repeat="r in ft.grid">
-            <td ng-class="{'thead':$first, 'money':$medium, 'tmoney':$last}">{{ d.date | date : 'yy:MM:dd'}}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.div != 0, 'zero':$middle && d.div == 0, 'tmoney':$last}">{{ d.div }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.havk != 0, 'zero':$middle && d.havk == 0, 'tmoney':$last}">{{ d.havk }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.food != 0, 'zero':$middle && d.food == 0, 'tmoney':$last}">{{ d.food }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.ent != 0, 'zero':$middle && d.ent == 0, 'tmoney':$last}">{{ d.ent }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.edu != 0, 'zero':$middle && d.edu == 0, 'tmoney':$last}">{{ d.edu }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.car != 0, 'zero':$middle && d.car == 0, 'tmoney':$last}">{{ d.car }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.trans != 0, 'zero':$middle && d.trans == 0, 'tmoney':$last}">{{ d.trans }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.health != 0, 'zero':$middle && d.health == 0, 'tmoney':$last}">{{ d.health }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.komun != 0, 'zero':$middle && d.komun == 0, 'tmoney':$last}">{{ d.komun }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.biggy != 0, 'zero':$middle && d.biggy == 0, 'tmoney':$last}">{{ d.biggy }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.mama1 != 0, 'zero':$middle && d.mama1 == 0, 'tmoney':$last}">{{ d.mama1 }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.mama2 != 0, 'zero':$middle && d.mama2 == 0, 'tmoney':$last}">{{ d.mama2 }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.mine != 0, 'zero':$middle && d.mine == 0, 'tmoney':$last}">{{ d.mine }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.wife != 0, 'zero':$middle && d.wife == 0, 'tmoney':$last}">{{ d.wife }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.visa != 0, 'zero':$middle && d.visa == 0, 'tmoney':$last}">{{ d.visa }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.home != 0, 'zero':$middle && d.home == 0, 'tmoney':$last}">{{ d.home }}</td>
-            <td ng-class="{'thead':$first, 'tmoney':$last}" class="usd">{{ d.usd }}</td>
-            <td ng-class="{'thead':$first, 'tmoney':$last}" class="eur">{{ d.eur }}</td>
-            <td ng-class="{'thead':$first, 'tmoney':$last}" class="gbp">{{ d.gbp }}</td>
-            <td ng-class="{'thead':$first, 'tmoney':$last}" class="usd">{{ d.debt }}</td>
-            <td ng-class="{'thead':$first, 'disbalance': d.total != 0, 'zero':$middle, 'tmoney':$last}">{{ d.total }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.zp != 0, 'zero':$middle && d.zp == 0, 'tmoney':$last}">{{ d.zp }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{ d.xusd }}</td>
+            <td ng-class="{'thead':$first, 'money':$medium, 'tmoney':$last}">{{ r.sdate }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.div != 0, 'zero':$middle && d.div == 0, 'tmoney':$last}">{{ r.div }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.havk != 0, 'zero':$middle && d.havk == 0, 'tmoney':$last}">{{ r.havk }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.food != 0, 'zero':$middle && d.food == 0, 'tmoney':$last}">{{ r.food }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.ent != 0, 'zero':$middle && d.ent == 0, 'tmoney':$last}">{{ r.ent }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.edu != 0, 'zero':$middle && d.edu == 0, 'tmoney':$last}">{{ r.edu }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.car != 0, 'zero':$middle && d.car == 0, 'tmoney':$last}">{{ r.car }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.trans != 0, 'zero':$middle && d.trans == 0, 'tmoney':$last}">{{ r.trans }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.health != 0, 'zero':$middle && d.health == 0, 'tmoney':$last}">{{ r.health }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.komun != 0, 'zero':$middle && d.komun == 0, 'tmoney':$last}">{{ r.komun }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.biggy != 0, 'zero':$middle && d.biggy == 0, 'tmoney':$last}">{{ r.biggy }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.mama1 != 0, 'zero':$middle && d.mama1 == 0, 'tmoney':$last}">{{ r.mama1 }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.mama2 != 0, 'zero':$middle && d.mama2 == 0, 'tmoney':$last}">{{ r.mama2 }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.mine != 0, 'zero':$middle && d.mine == 0, 'tmoney':$last}">{{ r.mine }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.wife != 0, 'zero':$middle && d.wife == 0, 'tmoney':$last}">{{ r.wife }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.visa != 0, 'zero':$middle && d.visa == 0, 'tmoney':$last}">{{ r.visa }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.home != 0, 'zero':$middle && d.home == 0, 'tmoney':$last}">{{ r.home }}</td>
+            <td ng-class="{'thead':$first, 'tmoney':$last}" class="usd">{{ r.usd }}</td>
+            <td ng-class="{'thead':$first, 'tmoney':$last}" class="eur">{{ r.eur }}</td>
+            <td ng-class="{'thead':$first, 'tmoney':$last}" class="gbp">{{ r.gbp }}</td>
+            <td ng-class="{'thead':$first, 'tmoney':$last}" class="usd">{{ r.debt }}</td>
+            <td ng-class="{'thead':$first, 'disbalance': d.total != 0, 'zero':$middle, 'tmoney':$last}">{{ r.total }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle && d.zp != 0, 'zero':$middle && d.zp == 0, 'tmoney':$last}">{{ r.zp }}</td>
+            <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{ r.xusd }}</td>
             <td ng-if="$first" class="thead usd">==USD</td>
-            <td ng-if="$middle" class="usd">{{ d.usdTotal | number: 0 }}</td>
-            <td ng-if="$last" class="tmoney usd"><b>{{ d.usdTotal | number: 0 }}</b></td>
+            <td ng-if="$middle" class="usd">{{ r.usdTotal | number: 0 }}</td>
+            <td ng-if="$last" class="tmoney usd"><b>{{ r.usdTotal | number: 0 }}</b></td>
           </tr>
         </table>
 

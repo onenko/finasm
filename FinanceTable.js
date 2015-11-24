@@ -23,15 +23,15 @@ function FinanceTable() {
         { field: 'div', title: 'Divers', cmd: 'x'},
         { field: 'food', title: 'Food', cmd: 'p'},
         { field: 'havk', title: 'Havka', cmd: 'e'},
-        { field: 'ent', title: 'Rozv', cmd: '?'},
-        { field: 'educ', title: 'Educ', cmd: 'e'},
-        { field: 'car', title: 'Car', cmd: 'e'},
-        { field: 'trans', title: 'Trnsp', cmd: 'e'},
-        { field: 'health', title: 'Health', cmd: 'e'},
-        { field: 'komun', title: 'Komun', cmd: 'e'},
-        { field: 'biggy', title: 'Doroge', cmd: 'e'},
-        { field: 'mama1', title: 'Mama1', cmd: 'e'},
-        { field: 'mama2', title: 'Mama2', cmd: 'e'}
+        { field: 'ent', title: 'Rozv', cmd: 'roz'},
+        { field: 'educ', title: 'Educ', cmd: 'edu'},
+        { field: 'car', title: 'Car', cmd: 'car'},
+        { field: 'trans', title: 'Trnsp', cmd: 't'},
+        { field: 'health', title: 'Health', cmd: 'health'},
+        { field: 'komun', title: 'Komun', cmd: 'k'},
+        { field: 'biggy', title: 'Doroge', cmd: 'd'},
+        { field: 'mama1', title: 'Mama1', cmd: 'mam1'},
+        { field: 'mama2', title: 'Mama2', cmd: 'mam2'}
     ];
 
     /*
