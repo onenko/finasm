@@ -6,6 +6,12 @@
  * Rows - days, or monthes, or years
  * Columns - categories of expences or categories of payments
  *
+ * Three groups of (configured) columns:
+ *  - exp - where the money disappear, for example: food;
+ *  - pay - where the money kept, usually payment source, example: visa
+ *  - fxc - foreign currencies, the first one is BASE currency
+ * Rest columns are hardcoded predefined rows, which are always present.
+ *
  * First column - 6 number string - identifies type of column and/or day or month or year
  *  '000000' - first column - is title of table columns
  *  '999999' - last column - is totals per all table
@@ -34,66 +40,53 @@ function FinanceTable() {
         { field: 'mama2', title: 'Mama2', cmd: 'mam2'}
     ];
 
-    /*
-    { date:'Date', div:'Divers', food:'Food', havk:'Havka', ent:'Rozv', edu: "Obraz", car: 'Car', trans: "Trnsp",
-      health: "Health", komun: "Komun", biggy: "Doroge", mama1:'Mama1', mama2:'Mama2',
-          home:'Home', 
-      mine:'Mine', wife:'Wife', visa:'Visa', usd:'USD', eur: 'EUR', gbp: 'GBP', debt: 'Debt', total: '0', zp: 'Zarplata',
-      xusd: 'xUSD', xeur: 'xEUR', xgbp: 'xGBP', usdTotal: '=USD' },
-      */
-    
     this.configPay = [
         { field: 'mine', title: "Mine", cmd: "1"},
         { field: 'wife', title: "Wife", cmd: "2"},
         { field: 'visa', title: "Visa", cmd: "v"}
     ];
 
+    this.configFxc = [
+        { field: 'usd', title: "USD", cmd: "usd"},
+        { field: 'eur', title: "EUR", cmd: "eur"},
+        { field: 'gbp', title: "GBP", cmd: "gbp"}
+    ];
+
     this.createRow = function(ssssss) {
-        var row = { sdate: ssssss};
+        var row = { sdate:ssssss, exp:{}, pay:{}, home:0, balance:0, fxc:{}, debt:0, zp:0, xfxc:{}};
         for(var i = 0; i < this.configExp.length; i++) {
-            row[this.configExp[i].title] = 0;
+            row.exp[this.configExp[i].title] = 0;
         }
         for(var i = 0; i < this.configPay.length; i++) {
-            row[this.configPay[i].title] = 0;
+            row.pay[this.configPay[i].title] = 0;
         }
-        row.Home = 0;
-        row.Balance = 0;
-        row.USD = 0;
-        row.EUR = 0;
-        row.GBP = 0;
-        row.Debt = 0;
-        row.Zarplata = 0;
-        row.xUSD = 0;
-        row.xEUR = 0;
-        row.xGBP = 0;
-        row['=USD'] = 0;
+        for(var i = 0; i < this.configFxc.length; i++) {
+            row.fxc[this.configFxc[i].title] = 0;
+        }
+        for(var i = 0; i < this.configFxc.length; i++) {
+            row.xfxc['x' + this.configFxc[i].title] = 0;
+        }
+        row['=' + this.configFxc[0].title] = 0; // first currency is predefined
         return row;
     }
 
     this.createTitleRow = function() {
-        var row = { sdate: '000000'};
+        var row = { sdate: '000000', exp:{}, pay:{}, home:'Home', balance:'0', fxc:{}, debt:'Debt', zp:'Salary', xfxc:{}};
         for(var i = 0; i < this.configExp.length; i++) {
-            row[this.configExp[i].title] = this.configExp[i].title;
+            row.exp[this.configExp[i].title] = this.configExp[i].title;
         }
         for(var i = 0; i < this.configPay.length; i++) {
-            row[this.configPay[i].title] = this.configPay[i].title;
+            row.pay[this.configPay[i].title] = this.configPay[i].title;
         }
-        row.Home = 0;
-        row.Balance = 0;
-        row.USD = 0;
-        row.EUR = 0;
-        row.GBP = 0;
-        row.Debt = 0;
-        row.Zarplata = 0;
-        row.xUSD = 0;
-        row.xEUR = 0;
-        row.xGBP = 0;
-        row['=USD'] = 0;
+        for(var i = 0; i < this.configFxc.length; i++) {
+            row[this.configFxc[i].title] = this.configFxc[i].title;
+        }
+        for(var i = 0; i < this.configFxc.length; i++) {
+            row['x' + this.configFxc[i].title] = 'x' + this.configFxc[i].title;
+        }
+        row['=' + this.configFxc[0].title] = '==' + this.configFxc[0].title;
         return row;
     }
-
-    
-    
     
     this.grid = [];    // array of rows
     this.date2S6 = function(d) {

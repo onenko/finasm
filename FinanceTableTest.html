@@ -11,9 +11,10 @@
         <h1>Test of FTable.js</h1>
         <table id="report" width="100%" border="1">
           <tr ng-repeat="r in ft.grid">
-            <td ng-class="{'thead':$first, 'money':$medium, 'tmoney':$last}">{{ r.sdate }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.div != 0, 'zero':$middle && d.div == 0, 'tmoney':$last}">{{ r.div }}</td>
-            <td ng-class="{'thead':$first, 'money':$middle && d.havk != 0, 'zero':$middle && d.havk == 0, 'tmoney':$last}">{{ r.havk }}</td>
+            <td ng-class="{'thead':$parent.$parent.$first, 'money':$parent.$parent.$medium, 'tmoney':$parent.$parent.$last}">{{ r.sdate }},{{$parent.$first}},{{$parent.$last}} </td>
+            <td ng-repeat="c in r.exp" ng-class="{'thead':$parent.$parent.$first, 'money':$parent.$parent.$middle && c != 0, 'zero':$parent.$parent.$middle && c == 0, 'tmoney':$parent.$parent.$last}">{{ c}}</td>
+            
+            <!--td ng-class="{'thead':$first, 'money':$middle && d.havk != 0, 'zero':$middle && d.havk == 0, 'tmoney':$last}">{{ r.havk }}</td>
             <td ng-class="{'thead':$first, 'money':$middle && d.food != 0, 'zero':$middle && d.food == 0, 'tmoney':$last}">{{ r.food }}</td>
             <td ng-class="{'thead':$first, 'money':$middle && d.ent != 0, 'zero':$middle && d.ent == 0, 'tmoney':$last}">{{ r.ent }}</td>
             <td ng-class="{'thead':$first, 'money':$middle && d.edu != 0, 'zero':$middle && d.edu == 0, 'tmoney':$last}">{{ r.edu }}</td>
@@ -37,7 +38,7 @@
             <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{ r.xusd }}</td>
             <td ng-if="$first" class="thead usd">==USD</td>
             <td ng-if="$middle" class="usd">{{ r.usdTotal | number: 0 }}</td>
-            <td ng-if="$last" class="tmoney usd"><b>{{ r.usdTotal | number: 0 }}</b></td>
+            <td ng-if="$last" class="tmoney usd"><b>{{ r.usdTotal | number: 0 }}</b></td -->
           </tr>
         </table>
 
