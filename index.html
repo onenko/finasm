@@ -4,7 +4,8 @@
   <!--script src="./1510.js"></script -->
   <script src="./utils.js"></script>
   <script src="./angular.js"></script>
-  <script src="./fin.js"></script>
+  <script src="./FinanceTable.js"></script>
+  <script src="./DateCordion.js"></script>
   <link rel="stylesheet" type="text/css" href="fin.css">
   <title>Fin.js</title>
 </head>
@@ -20,10 +21,14 @@
 
   <table border="1"><tr><td>	<!-- left column for fin assembler code -->
 
-    <textarea type="text" cols="60" rows="500" style="width:300px; height:600px;" name="code" id="code" ng-model="code">Z
+    <!--textarea type="text" cols="60" rows="500" style="width:300px; height:600px;" name="code" id="code" ng-model="code">Z
+    </textarea -->
+
+    <textarea type="text" cols="2" rows="500" style="width:3px; height:600px;" name="code" id="code" ng-model="code">Z
     </textarea>
 
-  </td><td class="right-panel-with-main-area">		<!-- right column for fin report table -->
+  </td>
+  <td class="right-panel-with-main-area">		<!-- right column for fin report table -->
 
     <table id="report" width="100%" border="1">
       <tr ng-repeat="d in dataz">

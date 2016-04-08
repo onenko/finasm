@@ -36,8 +36,8 @@ function FinanceTable() {
         { field: 'health', title: 'Health', cmd: 'health'},
         { field: 'komun', title: 'Komun', cmd: 'k'},
         { field: 'biggy', title: 'Doroge', cmd: 'd'},
-        { field: 'm1', title: 'M1', cmd: 'mam1'},
-        { field: 'm2', title: 'M2', cmd: 'mam2'}
+        { field: 'mama1', title: 'Mama1', cmd: 'mam1'},
+        { field: 'mama2', title: 'Mama2', cmd: 'mam2'}
     ];
 
     this.configPay = [
@@ -57,7 +57,7 @@ function FinanceTable() {
 //    this.aggregate = function() {}
 
     this.createRow = function(ssssss) {
-        var row = { sdate:ssssss, exp:{}, pay:{}, home:0, balance:0, fxc:{}, debt:0, zp:0, xfxc:{}, sum:0};
+        var row = { sdate:ssssss, exp:{}, pay:{}, home:0, balance:0, fxc:{}, debt:0, zp:0, xfxc:{}};
         for(var i = 0; i < this.configExp.length; i++) {
             row.exp[this.configExp[i].title] = 0;
         }
@@ -70,12 +70,12 @@ function FinanceTable() {
         for(var i = 0; i < this.configFxc.length; i++) {
             row.xfxc['x' + this.configFxc[i].title] = 0;
         }
-        // row['=' + this.configFxc[0].title] = 0; // first currency is predefined
+        row['=' + this.configFxc[0].title] = 0; // first currency is predefined
         return row;
     }
 
     this.createTitleRow = function() {
-        var row = { sdate: '000000', exp:{}, pay:{}, home:'Home', balance:'0', fxc:{}, debt:'Debt', zp:'Salary', xfxc:{}, sum:'=='};
+        var row = { sdate: '000000', exp:{}, pay:{}, home:'Home', balance:'0', fxc:{}, debt:'Debt', zp:'Salary', xfxc:{}};
         for(var i = 0; i < this.configExp.length; i++) {
             row.exp[this.configExp[i].title] = this.configExp[i].title;
         }
@@ -83,12 +83,12 @@ function FinanceTable() {
             row.pay[this.configPay[i].title] = this.configPay[i].title;
         }
         for(var i = 0; i < this.configFxc.length; i++) {
-            row.fxc[this.configFxc[i].title] = this.configFxc[i].title;
+            row[this.configFxc[i].title] = this.configFxc[i].title;
         }
         for(var i = 0; i < this.configFxc.length; i++) {
-            row.xfxc['x' + this.configFxc[i].title] = 'x' + this.configFxc[i].title;
+            row['x' + this.configFxc[i].title] = 'x' + this.configFxc[i].title;
         }
-        row.sum = '==' + this.configFxc[0].title;
+        row['=' + this.configFxc[0].title] = '==' + this.configFxc[0].title;
         return row;
     }
     

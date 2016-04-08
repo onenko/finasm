@@ -11,8 +11,19 @@
         <h1>Test of FTable.js</h1>
         <table id="report" width="100%" border="1">
           <tr ng-repeat="r in ft.grid">
-            <td ng-class="{'thead':$parent.$parent.$first, 'money':$parent.$parent.$medium, 'tmoney':$parent.$parent.$last}">{{ r.sdate }},{{$parent.$first}},{{$parent.$last}} </td>
-            <td ng-repeat="c in r.exp" ng-class="{'thead':$parent.$parent.$first, 'money':$parent.$parent.$middle && c != 0, 'zero':$parent.$parent.$middle && c == 0, 'tmoney':$parent.$parent.$last}">{{ c}}</td>
+            <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{r.sdate }},{{$first}},{{$last}},{{$middle}} </td>
+            <td ng-repeat="c in r.exp" ng-class="{'thead':$parent.$first, 'money':$parent.$middle && c != 0, 'zero':$parent.$middle && c == 0, 'tmoney':$parent.$last}">{{c}}</td>
+            <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{r.balance}}</td>
+            <td ng-repeat="c in r.pay" ng-class="{'thead':$parent.$first, 'money':$parent.$middle && c != 0, 'zero':$parent.$middle && c == 0, 'tmoney':$parent.$last}">{{c}}</td>
+            <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{r.home}}</td>
+            <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{r.zp}}</td>
+            <td ng-repeat="c in r.fxc" ng-class="{'thead':$parent.$first, 'money':$parent.$middle && c != 0, 'zero':$parent.$middle && c == 0, 'tmoney':$parent.$last}">{{c}}</td>
+            <td ng-repeat="c in r.xfxc" ng-class="{'thead':$parent.$first, 'money':$parent.$middle && c != 0, 'zero':$parent.$middle && c == 0, 'tmoney':$parent.$last}">{{c}}</td>
+            <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{r.debt}}</td>
+            <td ng-class="{'thead':$first, 'money':$middle, 'tmoney':$last}">{{r.sum}}</td>
+
+
+
             
             <!--td ng-class="{'thead':$first, 'money':$middle && d.havk != 0, 'zero':$middle && d.havk == 0, 'tmoney':$last}">{{ r.havk }}</td>
             <td ng-class="{'thead':$first, 'money':$middle && d.food != 0, 'zero':$middle && d.food == 0, 'tmoney':$last}">{{ r.food }}</td>

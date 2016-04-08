@@ -4,9 +4,8 @@
 
 body
 {
-  background-color:#ffffff;
-/*  background-color:#330022;
-  color:#CCCCCC;
+  background-color:#330022;
+/*  color:#CCCCCC;
   font-family: Tahoma;
   font-size:11px;
   font-weight:500;	 400 - normal, 700 - bold
@@ -46,13 +45,13 @@ table
 
 td {
   border: 1px solid #993377;
-  background-color:#ffffff;
+  background-color:#330022;
   padding: 4px;
 }
 
 th, td.thead {
   border: 1px solid #993377;
-  background-color:#0066CC;
+  background-color:#550033;
   font-weight:400;	/* 400 - normal, 700 - bold */
   text-align:center;
 }
@@ -109,7 +108,7 @@ td.zero {
 td.tmoney {
   text-align:right;
   color:#DDDDDD;
-  background-color:#0066CC;
+  background-color:#550033;
 }
 
 td.usd {
@@ -150,7 +149,7 @@ td.news
 
 textarea {
   border: 1px solid #662244;
-  background-color:#dddddd;
+  background-color:#441133;
   color:#CCCCCC;
   font-family: verdana,helvetica,arial,sans-serif;  /*Tahoma;*/
   font-size:13px;
